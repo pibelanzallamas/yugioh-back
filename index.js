@@ -4,7 +4,12 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://givemeayugiohcard.vercel.app",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  })
+);
 app.use(express.json());
 
 app.get("/", (req, res) => {
