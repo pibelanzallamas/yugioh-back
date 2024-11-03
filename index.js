@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
     .then((resp) => {
       const card = resp.data;
       res.send(card);
+      ``;
     })
     .catch((e) => {
       console.log(e);
