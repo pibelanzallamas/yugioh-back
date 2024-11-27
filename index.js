@@ -10,6 +10,7 @@ app.use(
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
 );
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -18,7 +19,6 @@ app.get("/", (req, res) => {
     .then((resp) => {
       const card = resp.data;
       res.send(card);
-      ``;
     })
     .catch((e) => {
       console.log(e);
